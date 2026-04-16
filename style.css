@@ -1,3 +1,32 @@
+:root {
+  --fondo: rgb(240, 232, 232);
+  --color :  rgb(143, 141, 141);
+  --fondocard : var(--fondo);
+  --textcolor : black;
+  --botoncolor : white;
+  --hover : rgb(164, 170, 168);
+
+}
+.rojo-mode{
+    --fondo : red;
+    --textcolor : rgb(247, 70, 70);
+}
+.azul-mode{
+    --fondo :blue;
+    --textcolor :rgb(76, 76, 236);
+}
+.verde-mode{
+    --fondo : green;
+    --textcolor : rgb(67, 172, 67);
+}
+.dark-mode{
+    --fondo : #0d1322;
+    --color : white;
+    --fondocard : #131c31;
+    --textcolor : white;
+    --botoncolor : #131c31;
+    --hover : #1a2338;
+}
 *{
     margin:0;
     padding:0;
@@ -5,73 +34,95 @@
 }
 html{ font-size: 99.5%;}
 
-
 body{
     display: flex;
     justify-content: center;
     flex-direction: column;
     min-height: 100vh; /*tamaño del viwport*/
-
+    background-color: var(--fondo);
 }
-
-.switch{
-    background-color: white;
+.botones{
     display: flex;
-    align-self: flex-end;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+.botones button{
     margin:10px;
-    margin-right: 20rem;
     font-family:monospace;
     font-size: 1rem;
     padding: 1rem;
     border-radius: 20px;
     border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-
+}
+#rojo{
+    background-color: red;
+    color: white;
+}
+#azul{
+    background-color:blue;
+    color: white;
+}
+#verde{
+    background-color: green;
+    color: white;
+}
+#rojo:hover,
+#azul:hover,
+#verde:hover{
+    background-color: rgb(107, 60, 60);
+    font-size: 1.1rem;
+}
+.switch{
+    background-color: var(--botoncolor);
+    color: var(--textcolor);
+    display: flex;
+    align-self: flex-end;
+    font-family:monospace;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 .switch:hover{
-    background-color: aquamarine;
-
+    background-color: var(--hover);
+    font-size: 1.1rem;
 }
-
 body main{
- background-color: rgb(255, 255, 255);
+ background-color: var(--fondo);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
-
-   
 .card{
-    background-color: rgb(255, 255, 255);
+    background-color: var(--fondocard);
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-    
- 
+    border-radius: 20px;
 }
-
 .imagenYtexto{
-    background-color: rgb(253, 251, 255);
+    background-color: var(--fondocard);
     display: flex;
     flex-direction: row;
-    border-radius: 10%;
+    border-radius: 10px;
     margin: 10px;
-    
 }
-
 .imagenYtexto img {
     border-radius: 100%;
     margin: 0.5rem;
 }
-
 .texto{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 1rem;
     font-size: 1.5rem;
+}
+.texto h3{
+    color: var(--textcolor);
 }
 .texto h4{
     color: rgb(143, 141, 141);
@@ -83,19 +134,18 @@ body main{
     justify-content: space-around;
     flex-direction: row;
     margin: 0.5rem;
-
-    
-
 }
 .seccion div{
     display: flex;
     align-items: center;
     flex-direction: column;
     
-    
+}
+.seccion div h3{
+    color: var(--textcolor)
 }
 .seccion div h4{
-    color:rgb(66, 65, 65);
+    color: rgb(143, 141, 141);
     margin: 0.5rem;
 }
 
@@ -106,22 +156,17 @@ footer{
     flex-direction: row;
 }
 footer button{
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-radius: 30px;
     margin: 1rem;
     padding: 1rem;
     font-family: monospace;
     border: none;
-}
-.boton1{
-    background-color: blue;
-    color: white;
-}
-.boton2{
-    background-color: white;
-    color: blue;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    background-color:var(--botoncolor);
+    color: var(--textcolor);
 }
 footer button:hover{
-    background-color: rgb(0, 0, 0);
-    font-size: 1.6rem;
+    background-color: var(--hover);
+    font-size: 1.1rem;
 }
