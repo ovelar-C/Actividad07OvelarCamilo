@@ -1,0 +1,6 @@
+1) Crear un form invisible que se convierta en visible al hacer en un nuevo boton
+- Validar que los campos no esten vacíos 
+- Para los campos numericos, que solo haya numeros
+2) Que los datos modificados se guarden en localStore -> a partir del submit
+3) Que el tema este decladrado en localStore(que no inicie siempre en claro)
+4) SPA (single page application) -> que no se vuelva a cargar

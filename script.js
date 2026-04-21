@@ -18,10 +18,21 @@ boton = document.querySelector() ->
 -El evetno a capturar será elc lick, lo cual js reaccionará,
 */
 
-const darkMode = document.querySelector('.switch');
+const darkMode = document.querySelector('#switch');
 const rojo = document.querySelector('#rojo');
 const blue = document.querySelector('#azul');
 const verde = document.querySelector('#verde');
+const aparecer = document.querySelector('#boton1');
+const formularioOculto = document.querySelector('.oculto');
+const formulario = document.querySelector(".form");
+
+const inputNombre = document.querySelector("#nombreinput");
+const nombre = document.querySelector('#nombre');
+const descripcion = document.querySelector("#descripcion");
+const descripcionInput = document.querySelector("#descripcionInput");
+
+
+const submit = document.querySelector('#submit');
 
 
 darkMode.addEventListener('click' , ()=>{
@@ -42,7 +53,7 @@ rojo.addEventListener('click' , ()=>{
    
 });
 
-azul.addEventListener('click' , ()=>{
+blue.addEventListener('click' , ()=>{
     //dentro es todo lo que se ejecutará
     document.body.classList.remove('dark-mode','rojo-mode','verde-mode');
     document.body.classList.toggle('azul-mode');
@@ -56,3 +67,13 @@ verde.addEventListener('click' , ()=>{
    
 });
 
+aparecer.addEventListener('click', ()=>{
+    formularioOculto.classList.toggle("oculto");
+});
+
+formulario.addEventListener("submit",function(e){
+    e.preventDefault();
+    nombre.textContent = inputNombre.value;
+    descripcion.textContent = descripcionInput.value;
+    formularioOculto.classList.toggle("oculto");
+})
