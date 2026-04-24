@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
+
 <body>
     <div class="botones">
-        <button class="botonesAll" id="switch" >
+        <button class="botonesAll" id="switch">
             modo oscuro
         </button>
         <button id="rojo">rojo</button>
@@ -17,63 +19,94 @@
         <button id="verde">verde</button>
     </div>
     <main>
-        
+
         <div class="card">
-        <header>
-            <div class="imagenYtexto">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Twemoji_1f600.svg" width="100px" height="100px">
-                <div class="texto">
+            <header>
+                <div class="imagenYtexto">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Twemoji_1f600.svg" width="100px"
+                        height="100px">
+                    <div class="texto">
                         <h3 id="nombre">Nombre</h3>
                         <h4 id="descripcion">Descripcion</h4>
-                </div>
-               
-            </div>
-        </header>
-        <section class="seccion">
-            <div>
-                <h3>22.7</h3>
-                <h4>Longevidad</h4>
-            </div>
-            <div>
-                <h3>0.5%</h3>
-                <h4>Nivel de CSS</h4>
-            </div>
-            <div>
-                <h3>0.1%</h3>
-                <h4>Nivel de Ingles</h4>
-            </div>
+                    </div>
 
-        </section>
+                </div>
+            </header>
+            <section class="seccion">
+                <div>
+                    <h3 >1</h3>
+                    <h4 >titulo</h4>
+                </div>
+                <div>
+                    <h3 >2</h3>
+                    <h4 >titulo</h4>
+                </div>
+                <div>
+                    <h3 >3</h3>
+                    <h4 >titulo</h4>
+                </div>
+
+            </section>
         </div>
     </main>
     <footer>
-            <button class="botonesAll" id="boton1" >aparecer magicamente un formulario</button>
+        <button class="botonesAll" id="boton1">aparecer magicamente un formulario</button>
 
     </footer>
-    <div class="oculto">
-    <section class="formulario" >
-        <form class="form">
-            <label for="nombre">Nombre</label>
-            <input id="nombreinput" type="text" required>
+    <div class="contenedorForm">
+        <div class="oculto">
+            <section class="formulario">
+                <form class="form1">
+                    <label for="nombreCardForm">Nombre</label>
+                    <input id="nombreCardForm" type="text" required>
 
-            <label for="subtitulo">Descripcion</label>
-            <input id="descripcionInput" type="text" required>
-            <select class="seleccion">
-                <option id="opcion1">1° estadistica</option>
-                <option id="opcion2">2° estadistica</option>
-                <option id="opcion3">3° estadistica</option>
-            </select>
-            <label for="titulo">Titulo</label>
-            <input type="text" required>
-            <label for="dato">Dato</label>
-            <input type="number" required>
+                    <label for="descripcionInput">Descripcion</label>
+                    <input id="descripcionInput" type="text" required>
 
-            <button id="submit" class="botonesAll" type="submit">guardar datos</button>
-        </form>
-        
-    </section>
+                    <button id="submit" class="botonesAll" type="submit">guardar datos</button>
+                </form>
+            </section>
+        </div>
+        <div class="oculto2">
+            <section class="formulario">
+                <div class="titulosEstadisticas">
+                    <h3>Estadisticas 1</h3>
+                    <h3>Estadisticas 2</h3>
+                    <h3>Estadisticas 3</h3>
+                </div>
+
+                    <form class="form2">
+                        <div class="bloques">
+                            <div>
+                                <label for="titulo">Titulo</label>
+                                <input class="titulo" type="text" required>
+                                <label for="dato">Dato</label>
+                                <input class="dato" type="number" required>
+                            </div>
+
+                            <div>
+                                <label for="titulo">Titulo</label>
+                                <input class="titulo" type="text" required>
+                                <label for="dato">Dato</label>
+                                <input class="dato" type="number" required>
+                            </div>
+
+                            <div>
+                                <label for="titulo">Titulo</label>
+                                <input class="titulo" type="text" required>
+                                <label for="dato">Dato</label>
+                                <input class="dato" type="number" required>
+                            </div>
+                        </div>
+
+                        <button class="botonesAll" type="submit" id="botonEstadisticas">Guardar Datos</button>
+
+                    </form>
+                
+            </section>
+        </div>
     </div>
 
-    
 </body>
+
 </html>
