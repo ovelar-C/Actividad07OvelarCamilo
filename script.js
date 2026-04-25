@@ -20,34 +20,31 @@ boton = document.querySelector() ->
 
 //SEPARAR TODO POR MODULOS
 //esto está atado con alambre
+
+/* ---BOTONES TEMAS--- */
 const darkMode = document.querySelector('#switch');
 const rojo = document.querySelector('#rojo');
 const blue = document.querySelector('#azul');
 const verde = document.querySelector('#verde');
-const aparecer = document.querySelector('#boton1');
+const showFormCard = document.querySelector('#botonMostrarForm');
 
-const formularioOculto = document.querySelector('.oculto');
-const estadisticasOcultas = document.querySelector('.oculto2');
+/*---FORMULARIOS 1 Y 2 */
+const formCard = document.querySelector("#form1");
+const formEstadisticas = document.querySelector("#form2");
 
-const formulario = document.querySelector(".form1");
-const formularioEstadisticas = document.querySelector(".form2");
-
-const inputNombre = document.querySelector("#nombreCardForm");
+/*--- INFO CARD */
+const inputNombre = document.querySelector("#nombreInput");
 const nombre = document.querySelector('#nombre');
 const descripcion = document.querySelector("#descripcion");
 const descripcionInput = document.querySelector("#descripcionInput");
 
-//ESTOS SON LOS H3 Y H4 DE LAS ESTADISTICAS
-const h3s = document.querySelectorAll(".seccion h3");
-const h4s = document.querySelectorAll(".seccion h4");
-
-/* este objeto contiene objetos que contienen propiedades,
-estas propiedades son los elementos referenciados del hmtl*/
+//H3 Y H4 DE LAS ESTADISTICAS
+const h3s = document.querySelectorAll(".estadisticas h3");
+const h4s = document.querySelectorAll(".estadisticas h4");
 
 //trae todos los inputs juntos, 3 titulos 3 datos
 const titulos = document.querySelectorAll(".titulo");
 const datos = document.querySelectorAll(".dato");
-
 
 
 function limpiarModos() {
@@ -117,18 +114,17 @@ verde.addEventListener('click', () => {
     localStorage.setItem("tema", "verde");
 });
 
-//aca es donde se oculta o aparece el formulario
-aparecer.addEventListener('click', () => {
-    formularioOculto.classList.toggle("oculto");
-
+//aca es donde aparece el formCard
+showFormCard.addEventListener('click', () => {
+    formCard.classList.remove("oculto");
+    formEstadisticas.classList.add("oculto");
 });
 
-//se guardan los datos del formulario y se modifican elementos del html
-formulario.addEventListener("submit", function (e) {
+//se guardan los datos del formCard y se modifican elementos del html
+formCard.addEventListener("submit", function (e) {
     e.preventDefault();
     nombre.textContent = inputNombre.value;
     descripcion.textContent = descripcionInput.value;
-
 
     const datosCard = {
         nombre: inputNombre.value,
@@ -136,10 +132,11 @@ formulario.addEventListener("submit", function (e) {
     }
 
     localStorage.setItem("datos", JSON.stringify(datosCard));
-    formularioOculto.classList.add("oculto");
-    estadisticasOcultas.classList.remove("oculto2");
+    formCard.classList.add("oculto");
+    formEstadisticas.classList.remove("oculto");
+
 });
-formularioEstadisticas.addEventListener("submit", function (e) {
+formEstadisticas.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const estadisticas = [];
@@ -159,6 +156,7 @@ formularioEstadisticas.addEventListener("submit", function (e) {
     localStorage.setItem("estadisticas", JSON.stringify(estadisticas));
     titulos.forEach(input => input.value = "");
     datos.forEach(input => input.value = "");
-    estadisticasOcultas.classList.add("oculto2");
+    formEstadisticas.classList.add("oculto");
+    formCard.classList.add("oculto")
 
 });

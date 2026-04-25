@@ -10,100 +10,96 @@
 </head>
 
 <body>
-    <div class="botones">
-        <button class="botonesAll" id="switch">
+    <header class="botones">
+        <button id="switch" class="botonesAll">
             modo oscuro
         </button>
         <button id="rojo">rojo</button>
         <button id="azul">azul</button>
         <button id="verde">verde</button>
-    </div>
+    </header>
     <main>
 
-        <div class="card">
-            <header>
-                <div class="imagenYtexto">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Twemoji_1f600.svg" width="100px"
-                        height="100px">
-                    <div class="texto">
-                        <h3 id="nombre">Nombre</h3>
-                        <h4 id="descripcion">Descripcion</h4>
+        <article class="card">
+            <header class="headerCard">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Twemoji_1f600.svg" width="100px"
+                    height="100px">
+
+                <div class="cardInfo">
+                    <h3 id="nombre">Nombre</h3>
+                    <h4 id="descripcion">Descripcion</h4>
+                </div>
+
+            </header>
+            <section class="estadisticas">
+                <div>
+                    <h3>1</h3>
+                    <h4>titulo</h4>
+                </div>
+                <div>
+                    <h3>2</h3>
+                    <h4>titulo</h4>
+                </div>
+                <div>
+                    <h3>3</h3>
+                    <h4>titulo</h4>
+                </div>
+
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <button id="botonMostrarForm" class="botonesAll">
+            aparecer magicamente un formulario
+        </button>
+    </footer>
+
+    <div class="contenedorForm">
+        <div id="form1" class="oculto">
+            <form class="form">
+                <label>Nombre</label>
+                <input id="nombreInput" type="text" required>
+
+                <label>Descripcion</label>
+                <input id="descripcionInput" type="text" required>
+
+                <button class="botonesAll" type="submit">guardar datos</button>
+            </form>
+        </div>
+
+        <div id="form2" class="oculto">
+            <section class="titulosEstadisticas">
+                <h3>Estadisticas 1</h3>
+                <h3>Estadisticas 2</h3>
+                <h3>Estadisticas 3</h3>
+            </section>
+
+            <form id="formEstadisticas" class="form">
+                <div class="bloques">
+                    <div>
+                        <label for="titulo">Titulo</label>
+                        <input class="titulo" type="text" required>
+                        <label for="dato">Dato</label>
+                        <input class="dato" type="number" required>
                     </div>
 
+                    <div>
+                        <label for="titulo">Titulo</label>
+                        <input class="titulo" type="text" required>
+                        <label for="dato">Dato</label>
+                        <input class="dato" type="number" required>
+                    </div>
+
+                    <div>
+                        <label for="titulo">Titulo</label>
+                        <input class="titulo" type="text" required>
+                        <label for="dato">Dato</label>
+                        <input class="dato" type="number" required>
+                    </div>
                 </div>
-            </header>
-            <section class="seccion">
-                <div>
-                    <h3 >1</h3>
-                    <h4 >titulo</h4>
-                </div>
-                <div>
-                    <h3 >2</h3>
-                    <h4 >titulo</h4>
-                </div>
-                <div>
-                    <h3 >3</h3>
-                    <h4 >titulo</h4>
-                </div>
-
-            </section>
-        </div>
-    </main>
-    <footer>
-        <button class="botonesAll" id="boton1">aparecer magicamente un formulario</button>
-
-    </footer>
-    <div class="contenedorForm">
-        <div class="oculto">
-            <section class="formulario">
-                <form class="form1">
-                    <label for="nombreCardForm">Nombre</label>
-                    <input id="nombreCardForm" type="text" required>
-
-                    <label for="descripcionInput">Descripcion</label>
-                    <input id="descripcionInput" type="text" required>
-
-                    <button id="submit" class="botonesAll" type="submit">guardar datos</button>
-                </form>
-            </section>
-        </div>
-        <div class="oculto2">
-            <section class="formulario">
-                <div class="titulosEstadisticas">
-                    <h3>Estadisticas 1</h3>
-                    <h3>Estadisticas 2</h3>
-                    <h3>Estadisticas 3</h3>
-                </div>
-
-                    <form class="form2">
-                        <div class="bloques">
-                            <div>
-                                <label for="titulo">Titulo</label>
-                                <input class="titulo" type="text" required>
-                                <label for="dato">Dato</label>
-                                <input class="dato" type="number" required>
-                            </div>
-
-                            <div>
-                                <label for="titulo">Titulo</label>
-                                <input class="titulo" type="text" required>
-                                <label for="dato">Dato</label>
-                                <input class="dato" type="number" required>
-                            </div>
-
-                            <div>
-                                <label for="titulo">Titulo</label>
-                                <input class="titulo" type="text" required>
-                                <label for="dato">Dato</label>
-                                <input class="dato" type="number" required>
-                            </div>
-                        </div>
-
-                        <button class="botonesAll" type="submit" id="botonEstadisticas">Guardar Datos</button>
-
-                    </form>
-                
-            </section>
+                <button class="botonesAll" type="submit" id="botonEstadisticas">Guardar Datos</button>
+            </form>
         </div>
     </div>
 

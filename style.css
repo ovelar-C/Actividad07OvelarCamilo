@@ -33,7 +33,6 @@
     padding:0;
     box-sizing: border-box;
 }
-html{ font-size: 99.5%;}
 
 .botonesAll{
     margin:1rem;
@@ -106,48 +105,49 @@ body main{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
     border-radius: 20px;
 }
-.imagenYtexto{
+.headerCard{
     background-color: var(--fondocard);
     display: flex;
     flex-direction: row;
     border-radius: 10px;
     margin: 10px;
 }
-.imagenYtexto img {
+.headerCard img {
     border-radius: 100%;
     margin: 0.5rem;
 }
-.texto{
+.cardInfo{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 1rem;
     font-size: 1.5rem;
+    font-family: monospace;
 }
-.texto h3{
+.cardInfo h3{
     color: var(--textcolor);
 }
-.texto h4{
+.cardInfo h4{
     color: rgb(143, 141, 141);
     margin:0.5rem;
 }
 
-.seccion{
+.estadisticas{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     margin: 0.5rem;
 }
-.seccion div{
+.estadisticas div{
     display: flex;
     align-items: center;
     flex-direction: column;
     
 }
-.seccion div h3{
+.estadisticas div h3{
     color: var(--textcolor)
 }
-.seccion div h4{
+.estadisticas div h4{
     color: rgb(143, 141, 141);
     margin: 0.5rem;
 }
@@ -159,19 +159,17 @@ footer{
     flex-direction: row;
 }
 
+
 .oculto{
     display: none;
 }
-.oculto2{
-    display: none;
-}
-
 .contenedorForm{
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
-.form1, .form2{
+.form{
     background-color: var(--fondocard);
     border-radius: 20px;
     display: flex;
@@ -179,28 +177,25 @@ footer{
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-}
-
-.formulario{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin: 1rem;
 }
-.formulario label{
+
+.form label{
     font-family: monospace;
     font-size: 1rem;
     margin: 0.5rem;
     color: var(--textcolor);
 }
-.formulario input{
+.form input{
     border-radius: 20px;
     border: none;
     margin-bottom: 1rem;
     background-color: #8e8e8f;
     padding: 0.3rem;
+}
+#form2{
+    margin: 1rem;
 }
 .titulosEstadisticas{
     color: var(--textcolor);
@@ -217,9 +212,7 @@ footer{
     flex-direction: row;
     justify-content: center;
 }
-.form2{
-    margin: 1rem;
-}
+
 
 
 
